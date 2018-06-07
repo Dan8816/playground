@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Playground</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+            padding-top: 200px;
+        }
+        #content{
+            margin-top: 40px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .block{
+            height: 200px;
+            width: 200px;
+            border: 6px solid black;
+            border-radius: 4px;
+            background-color: {{color}};
+            display: inline-block;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <div id=content>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        {% if times %}
+            {% for x in range(0,times-3): %}
+                <div class="block"></div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+</body>
+</html>
